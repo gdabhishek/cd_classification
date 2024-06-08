@@ -4,10 +4,11 @@ from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 
 import numpy as np
-import os
 from tensorflow.keras.models import load_model
 import cv2
+
 upload_folder = os.path.join('static', 'uploads')
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = upload_folder
 
